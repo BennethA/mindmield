@@ -1,6 +1,4 @@
-/* eslint-disable no-unused-vars */
 import { FaPaintBrush } from "react-icons/fa";
-import React from "react";
 import { Link } from "react-router-dom";
 
 const Hero = () => {

@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Navigation = () => {
@@ -12,9 +10,9 @@ const Navigation = () => {
             key={idx}
             className={`${
               location.pathname === `/${name.toLocaleLowerCase()}` &&
-              "bg-[#ffffff2f] "
+              "bg-[#ffffff2f]"
             } ${
-              location.pathname === `/` && name === "Home" && "bg-[#ffffff2f] "
+              location.pathname === `/` && name === "Home" && "bg-[#ffffff2f]"
             } px-4 py-2 rounded-full hover:bg-[#ffffff2f] active:bg-[#ffffff2f] transition`}
             to={`/${name.toLowerCase()}`}
           >

@@ -2,11 +2,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import WrongURL from "./Pages/WrongURL";
 import Designs from "./Pages/Designs";
-import Design from "./Pages/Design";
 import Contact from "./Pages/Contact";
 import Navigation from "./Components/Navigation";
 import Footer from "./Components/Footer";
 import Mary from "./Designs/Mary";
+import Delivery from "./Designs/Delivery";
 
 export default function App() {
   const designItems = [
@@ -15,6 +15,12 @@ export default function App() {
       preview: "/design/mary",
       title: "Mary's Fashion Store",
       image: "src/assets/mary's design.png",
+    },
+    {
+      id: 2,
+      preview: "/design/delivery",
+      title: "Mr. OTC Delivery Flyer",
+      image: "src/assets/nana delivery.jpg",
     },
   ];
   return (
@@ -31,12 +37,8 @@ export default function App() {
             path="/designs"
             element={<Designs designItems={designItems} />}
           />
-          <Route
-            exact
-            path="/design/:id"
-            element={<Design designItems={designItems} />}
-          />
           <Route exact path="/design/mary" element={<Mary />} />
+          <Route exact path="/design/delivery" element={<Delivery />} />
         </Routes>
         <Footer />
       </BrowserRouter>
